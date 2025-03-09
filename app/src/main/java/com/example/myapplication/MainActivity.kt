@@ -2,6 +2,7 @@
 
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -15,6 +16,8 @@ import com.example.myapplication.R
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -23,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         val imageView:ImageView=findViewById(R.id.imageView)
         val largeimage:ImageView=findViewById(R.id.imageLargeView)
         val button:Button=findViewById(R.id.button)
+
+
         // Initially, set the small image and text to be invisible
         imageView.visibility = View.INVISIBLE
         textView.visibility = View.INVISIBLE
@@ -45,6 +50,15 @@ class MainActivity : AppCompatActivity() {
             button.visibility=View.VISIBLE
             imageView.visibility=View.VISIBLE
             textView.visibility = View.VISIBLE
+
+            button.setOnClickListener{
+                val intent=Intent(this@MainActivity,startPage::class.java)
+                startActivity(intent)
+            }
+
+
         }, 1000) // 2000 milliseconds = 2 seconds
+
+
     }
 }

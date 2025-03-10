@@ -21,9 +21,9 @@ class startPage : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        signup.setOnClickListener {
-//            val intent = Intent(this@startPage, signuppage::class.java)
-//            startActivity(intent)
-//        }
+        signup.setOnClickListener {
+            val intent = Intent(this@startPage, signupPage::class.java)
+            startActivity(intent)
+        }
     }
 }

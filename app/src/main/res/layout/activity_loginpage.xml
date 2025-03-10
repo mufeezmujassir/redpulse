@@ -24,7 +24,7 @@
         android:id="@+id/username"
         android:background="@drawable/inputstyle"
         android:layout_width="351dp"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:hint="Username"
         android:textColor="#000000"
         android:textColorHint="#808080"
@@ -40,7 +40,7 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="351dp"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:background="@drawable/inputstyle"
         android:hint="Password"
         android:paddingLeft="30dp"
@@ -54,9 +54,10 @@
         app:layout_constraintVertical_bias="0.579" />
 
     <Button
-        android:layout_width="292dp"
-        android:layout_height="60dp"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
         android:text="Login"
+        android:textColor="@color/cardview_dark_background"
         android:background="@drawable/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,4 +65,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.722" />
+
+    <TextView
+        android:id="@+id/signuptext"
+        android:layout_width="289dp"
+        android:layout_height="42dp"
+        android:text="Don't have an account? Signup"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
 </androidx.constraintlayout.widget.ConstraintLayout>

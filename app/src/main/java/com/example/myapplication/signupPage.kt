@@ -15,6 +15,7 @@ class signupPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_page)
         val dobEditText: EditText = findViewById(R.id.dob)
+        val gender:Spinner=findViewById(R.id.gender)
         val spinner:Spinner=findViewById(R.id.spinner)
         val adapter=ArrayAdapter.createFromResource(this,R.array.spinner_items,android.R.layout.simple_spinner_item)
 
@@ -53,12 +54,27 @@ class signupPage : AppCompatActivity() {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter=adapter
-
+        gender.adapter=adapter
+        gender.setSelection(0)
         spinner.setSelection(0)
+        gender.onItemSelectedListener=object:AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                if(position==0){
+                    Toast.makeText(this@signupPage, "Blood type", Toast.LENGTH_SHORT).show()
+
+                }
+                else{
+
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Do nothing
+            }
+        }
         spinner.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 if(position==0){
-                    Toast.makeText(this@signupPage, "Item selected: $position", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@signupPage, "Blood type", Toast.LENGTH_SHORT).show()
 
                 }
                 else{

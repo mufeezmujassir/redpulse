@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -14,11 +15,11 @@ class signupPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_page)
-
+       val signup:Button=findViewById(R.id.signup)
         val dobEditText: EditText = findViewById(R.id.dob)
         val gender: Spinner = findViewById(R.id.gender)
         val spinner: Spinner = findViewById(R.id.spinner)
-
+        val logintext:TextView=findViewById(R.id.logintext)
         val adapter = ArrayAdapter.createFromResource(
             this, R.array.spinner_items, android.R.layout.simple_spinner_item
         )
@@ -89,8 +90,14 @@ class signupPage : AppCompatActivity() {
                 // Do nothing
             }
         }
+        signup.setOnClickListener{
+            val intent=Intent(this@signupPage,loginpage::class.java)
+            startActivity(intent)
+        }
+        logintext.setOnClickListener{
+            val intent=Intent(this@signupPage,loginpage::class.java)
+        }
 
 
-        val signup:Button=
     }
 }

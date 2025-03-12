@@ -9,7 +9,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string-array name="spinner_items">
+    <string-array name="bloodtype">
         <item>A+</item>
         <item>A-</item>
         <item>B+</item>
@@ -21,7 +21,7 @@
 
 
     </string-array>
-    <string-array name="spinner_gender">
+    <string-array name="gender">
         <item>Male</item>
         <item>Female</item>
     </string-array>

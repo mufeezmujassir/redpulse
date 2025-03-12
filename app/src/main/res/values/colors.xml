@@ -13,5 +13,6 @@
     <color name="button_start">#CF8E8E</color>
     <color name="button_end">#694848</color>
     <color name="input_field">#D9D9D9</color>
-
+    <color name="header_color">#560404</color>
+    <color name="bg_design">#AD0909</color>
 </resources>

@@ -18,15 +18,11 @@ class signupPage : AppCompatActivity() {
        val signup:Button=findViewById(R.id.signup)
         val dobEditText: EditText = findViewById(R.id.dob)
         val gender: Spinner = findViewById(R.id.gender)
-        val spinner: Spinner = findViewById(R.id.spinner)
+        val spinner: Spinner = findViewById(R.id.bloodtype)
         val logintext:TextView=findViewById(R.id.logintext)
-        val adapter = ArrayAdapter.createFromResource(
-            this, R.array.spinner_items, android.R.layout.simple_spinner_item
-        )
 
-        val genderAdapter = ArrayAdapter.createFromResource(
-            this, R.array.spinner_gender, android.R.layout.simple_spinner_item
-        )
+
+
 
         val calendar = Calendar.getInstance()
         val today = calendar.timeInMillis
@@ -54,48 +50,19 @@ class signupPage : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-        // Set adapters for spinners
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = adapter
-        gender.adapter = genderAdapter
 
-        gender.setSelection(0)
-        spinner.setSelection(0)
 
-        gender.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                if (position == 0) {
-                    Toast.makeText(this@signupPage, "Gender type", Toast.LENGTH_SHORT).show()
-                } else {
-                    // Handle other positions if necessary
-                }
-            }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Do nothing
-            }
-        }
 
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                if (position == 0) {
-                    Toast.makeText(this@signupPage, "Blood type", Toast.LENGTH_SHORT).show()
-                } else {
-                    // Handle other positions if necessary
-                }
-            }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Do nothing
-            }
-        }
+
         signup.setOnClickListener{
             val intent=Intent(this@signupPage,loginpage::class.java)
             startActivity(intent)
         }
         logintext.setOnClickListener{
             val intent=Intent(this@signupPage,loginpage::class.java)
+            startActivity(intent)
         }
 
 

@@ -72,23 +72,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
+
     <Spinner
         android:id="@+id/gender"
         android:layout_width="351dp"
         android:layout_height="45dp"
         android:background="@drawable/inputstyle"
         android:ems="10"
-
-
+        android:entries="@array/gender"
         android:paddingLeft="30dp"
+        android:popupTheme="@style/SpinnerPopupStyle"
         android:textColor="#000000"
         android:textColorHint="#808080"
-        android:textSize="18sp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <EditText
         android:id="@+id/email"
@@ -146,22 +147,23 @@
         app:layout_constraintVertical_bias="0.717" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/bloodtype"
         android:layout_width="351dp"
         android:layout_height="45dp"
         android:background="@drawable/inputstyle"
         android:ems="10"
-
-
+        android:entries="@array/bloodtype"
         android:paddingLeft="30dp"
         android:textColor="#000000"
         android:textColorHint="#808080"
-        android:textSize="18sp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        app:layout_constraintVertical_bias="0.798"
+        android:popupTheme="@style/SpinnerPopupStyle" />
+
 
     <Button
         android:id="@+id/signup"
